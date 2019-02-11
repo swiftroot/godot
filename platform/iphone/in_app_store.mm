@@ -314,7 +314,6 @@ InAppStore *InAppStore::get_singleton() {
 InAppStore::InAppStore() {
 	ERR_FAIL_COND(instance != NULL);
 	instance = this;
-	auto_finish_transactions = false;
 
 	TransObserver *observer = [[TransObserver alloc] init];
 	[[SKPaymentQueue defaultQueue] addTransactionObserver:observer];
